@@ -35,8 +35,12 @@ def position_taken?(board, index)
 end
 
 # true if move is valid: 1. input index between 0-8 2. space is not taken (is free)
-def valid_move?(board, index)
-  index.between?(0,8) && !position_taken?(board, index)
+def valid_move?(board, index) #  index.between?(0,8) && !position_taken?(board, index)
+  if index.between?(0,8)
+    if !position_taken?(board, index)
+      true
+    end
+  end
 end
 
 # retuns # of turns that have been played
