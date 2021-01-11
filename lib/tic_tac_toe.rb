@@ -13,7 +13,7 @@ WIN_COMBINATIONS = [
    ]
 
 # empty board
-board_empty = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+#board_empty = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
 
 # prints current board played
 def display_board (board)
