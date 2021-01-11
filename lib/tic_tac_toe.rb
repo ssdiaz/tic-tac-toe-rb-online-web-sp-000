@@ -25,8 +25,8 @@ def input_to_index(user_input)
 end
 
 # sets index to current player's token
-def move(board, index, current_player)
-  board[index] = current_player
+def move(board, index, player)
+  board[index] = player
 end
 
 # check if position is free; returns true if position is taken, & false if position is free
@@ -61,7 +61,7 @@ def turn(board)
   input = gets.strip
   index = input_to_index(input)
   if valid_move?(board, index)
-    move(board, index, current_player)
+    move(board, index, player)
     display_board(board)
   else
     turn(board)
