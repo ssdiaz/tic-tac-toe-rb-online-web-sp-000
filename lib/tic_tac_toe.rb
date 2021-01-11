@@ -25,7 +25,7 @@ def input_to_index(user_input)
 end
 
 # sets index to current player's token
-def move(board, index token)
+def move(board, index, token)
   board[index] = token
 end
 
