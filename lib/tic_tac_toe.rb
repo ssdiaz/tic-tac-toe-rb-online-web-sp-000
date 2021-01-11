@@ -53,3 +53,32 @@ def valid_move?(board, index)
     false
   end
 end
+
+# Returns number of turns that have been played
+def turn_count (board)
+  counter = 0
+  board.each do |index|
+    if index == "X" || index == "O"
+      counter += 1
+    end
+  end
+  counter
+end
+
+# uses #turn_count to detmine if X turn or O turn
+def current_player (board)
+  turn_count(board).even? ? "X" : "O"
+end
+
+# single turn logic.
+def turn(board)
+  puts "Please enter 1-9:"
+  input = gets.strip                     # get input
+  index = input_to_index(input)          # convert input to index
+  if valid_move?(board, index) == true   # if index is valid
+      move(board, index)                   # make the move for input
+  else                                   #else
+    turn(board)                            #  ask for input again until given valid input (loop back to top)
+  end
+  puts display_board(board)              # display board after move
+end
