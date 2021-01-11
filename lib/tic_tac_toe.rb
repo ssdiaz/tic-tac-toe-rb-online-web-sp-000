@@ -25,7 +25,7 @@ def display_board (board)
 end
 
 # takes user input and converts (sub -1) to fit board index
-def input_to_index (user_input)
+def input_to_index(user_input)
   user_input.to_i - 1
 end
 
