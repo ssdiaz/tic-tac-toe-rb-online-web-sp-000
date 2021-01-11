@@ -28,3 +28,8 @@ end
 def move(board, index, current_player)
   board[index] = current_player
 end
+
+# check if position is free; returns true if position is taken, & false if position is free
+def position_taken?(board, index)
+  !(board[index].nil? || board[index] == " ")
+end
