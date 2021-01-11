@@ -72,11 +72,11 @@ end
 def won?(board) # return winning combo index, or false if no win combo
  WIN_COMBINATIONS.find do |winning_combo| # find first  winning_combo in WIN_COMBINATIONS
     # win_combination is a 3 element array of indexes that compose a win, [0,1,2]
-    index_1 = board[winning_combo[0]] # load the value of the board at winning_combo's index
-    index_2 = board[winning_combo[1]] # load the value of the board at win_index_2
-    index_3 = board[winning_combo[2]] # load the value of the board at win_index_3
+  #  index_0 = board[winning_combo[0]] # load the value of the board at winning_combo's index
+  #  index_1 = board[winning_combo[1]] # load the value of the board at win_index_2
+  #  index_2 = board[winning_combo[2]] # load the value of the board at win_index_3
 
-    if (index_1 == "X" && index_2 == "X" && index_3 == "X") || (index_1 == "O" && index_2 == "O" && index_3 == "O")
+    if (board[winning_combo[0]] == "X" && board[winning_combo[1]] == "X" && board[winning_combo[2]]  == "X") || (board[winning_combo[0]] == "O" && board[winning_combo[1]] == "O" && board[winning_combo[2]]  == "O")
         return winning_combo # return the win_combination indexes that won
       end
   end
