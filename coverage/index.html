@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2021-01-11T03:07:01+00:00">2021-01-11T03:07:01+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2021-01-11T03:08:53+00:00">2021-01-11T03:08:53+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -537,31 +537,31 @@
         <li class="never" data-hits="" data-linenumber="75">
           
           
-          <code class="ruby">  #  index_0 = board[winning_combo[0]] # load the value of the board at winning_combo&#39;s index</code>
+          <code class="ruby">    #if (board[winning_combo[0]] == &quot;X&quot; &amp;&amp; board[winning_combo[1]] == &quot;X&quot; &amp;&amp; board[winning_combo[2]]  == &quot;X&quot;) || (board[winning_combo[0]] == &quot;O&quot; &amp;&amp; board[winning_combo[1]] == &quot;O&quot; &amp;&amp; board[winning_combo[2]]  == &quot;O&quot;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="76">
+        <li class="covered" data-hits="113" data-linenumber="76">
+          <span class="hits">113</span>
           
-          
-          <code class="ruby">  #  index_1 = board[winning_combo[1]] # load the value of the board at win_index_2</code>
+          <code class="ruby">    if board[winning_combo[0]] == board[winning_combo[1]] &amp;&amp;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="77">
           
           
-          <code class="ruby">  #  index_2 = board[winning_combo[2]] # load the value of the board at win_index_3</code>
+          <code class="ruby">        board[winning_combo[0]] == board[winning_combo[2]] &amp;&amp;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="78">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">          board[winning_combo[1]] == board[winning_combo[2]] &amp;&amp;</code>
         </li>
       
-        <li class="covered" data-hits="113" data-linenumber="79">
-          <span class="hits">113</span>
+        <li class="never" data-hits="" data-linenumber="79">
           
-          <code class="ruby">    if (board[winning_combo[0]] == &quot;X&quot; &amp;&amp; board[winning_combo[1]] == &quot;X&quot; &amp;&amp; board[winning_combo[2]]  == &quot;X&quot;) || (board[winning_combo[0]] == &quot;O&quot; &amp;&amp; board[winning_combo[1]] == &quot;O&quot; &amp;&amp; board[winning_combo[2]]  == &quot;O&quot;)</code>
+          
+          <code class="ruby">            board[winning_combo[0]] != &quot; &quot;</code>
         </li>
       
         <li class="covered" data-hits="8" data-linenumber="80">
