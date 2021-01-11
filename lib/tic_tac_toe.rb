@@ -77,10 +77,11 @@ def turn(board)
   index = input_to_index(input)          # convert input to index
   if valid_move?(board, index) == true   # if index is valid
       move(board, index)                   # make the move for input
-      puts display_board(board)            # display board after move
+
   else                                   #else
     turn(board)                            #  ask for input again until given valid input (loop back to top)
   end
+        puts display_board(board)            # display board after move
 end
 
 # returns false if no win combo is present on the board & reutrn winning index array [0,1,2]
