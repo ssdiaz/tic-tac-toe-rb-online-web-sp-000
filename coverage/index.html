@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2021-01-11T03:56:06+00:00">2021-01-11T03:56:06+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2021-01-11T03:58:37+00:00">2021-01-11T03:58:37+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -53,7 +53,7 @@
       <tr>
         <td class="strong"><a href="#e4f9c9c4a286911b036da0f3bb480f3ba466f9dc" class="src_link" title="lib/tic_tac_toe.rb">lib/tic_tac_toe.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>102</td>
+        <td>101</td>
         <td>51</td>
         <td>51</td>
         <td>0</td>
@@ -597,7 +597,7 @@
         <li class="covered" data-hits="1" data-linenumber="85">
           <span class="hits">1</span>
           
-          <code class="ruby">def winner(board) # returns the token that won</code>
+          <code class="ruby">def winner(board) # returns the player token that won</code>
         </li>
       
         <li class="covered" data-hits="7" data-linenumber="86">
@@ -609,7 +609,7 @@
         <li class="covered" data-hits="6" data-linenumber="87">
           <span class="hits">6</span>
           
-          <code class="ruby">   board[won?(board)[0]] # find first index of winning board and display it from board</code>
+          <code class="ruby">   board[won?(board)[0]] # use first index of winning board and display it from board</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="88">
@@ -630,73 +630,67 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="91">
-          
-          
-          <code class="ruby"># play method, responsi for game loop,</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="92">
+        <li class="covered" data-hits="1" data-linenumber="91">
           <span class="hits">1</span>
           
-          <code class="ruby">def play(board)</code>
+          <code class="ruby">def play(board) # play method, loops the game until over and gives outcome</code>
         </li>
       
-        <li class="covered" data-hits="12" data-linenumber="93">
+        <li class="covered" data-hits="12" data-linenumber="92">
           <span class="hits">12</span>
           
-          <code class="ruby">  until over?(board)#  until the game is over</code>
+          <code class="ruby">  until over?(board)</code>
         </li>
       
-        <li class="covered" data-hits="17" data-linenumber="94">
+        <li class="covered" data-hits="17" data-linenumber="93">
           <span class="hits">17</span>
           
-          <code class="ruby">    turn(board) #take turns</code>
+          <code class="ruby">    turn(board)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="95">
+        <li class="never" data-hits="" data-linenumber="94">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="96">
+        <li class="never" data-hits="" data-linenumber="95">
           
           
-          <code class="ruby">#</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="12" data-linenumber="97">
+        <li class="covered" data-hits="12" data-linenumber="96">
           <span class="hits">12</span>
           
-          <code class="ruby">    if won?(board)#  if the game was won</code>
+          <code class="ruby">    if won?(board)</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="98">
+        <li class="covered" data-hits="5" data-linenumber="97">
           <span class="hits">5</span>
           
-          <code class="ruby">     puts &quot;Congratulations #{winner(board)}!&quot; # congratulate the winner</code>
+          <code class="ruby">     puts &quot;Congratulations #{winner(board)}!&quot;</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="99">
+        <li class="covered" data-hits="7" data-linenumber="98">
           <span class="hits">7</span>
           
-          <code class="ruby">   elsif draw?(board)       #  else if the game was a draw</code>
+          <code class="ruby">   elsif draw?(board)</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="100">
+        <li class="covered" data-hits="3" data-linenumber="99">
           <span class="hits">3</span>
           
-          <code class="ruby">     puts &quot;Cat&#39;s Game!&quot;     #    tell the players it has been a draw</code>
+          <code class="ruby">     puts &quot;Cat&#39;s Game!&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="101">
+        <li class="never" data-hits="" data-linenumber="100">
           
           
           <code class="ruby">   end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="102">
+        <li class="never" data-hits="" data-linenumber="101">
           
           
           <code class="ruby">end</code>
