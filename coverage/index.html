@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2021-01-11T02:58:18+00:00">2021-01-11T02:58:18+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2021-01-11T02:59:19+00:00">2021-01-11T02:59:19+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -525,7 +525,7 @@
         <li class="covered" data-hits="16" data-linenumber="73">
           <span class="hits">16</span>
           
-          <code class="ruby"> WIN_COMBINATIONS.find do |combination| # find first win combination in WIN_COMBINATIONS</code>
+          <code class="ruby"> WIN_COMBINATIONS.find do |winning_combo| # find first winning_combo combination in WIN_COMBINATIONS</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="74">
@@ -537,19 +537,19 @@
         <li class="covered" data-hits="113" data-linenumber="75">
           <span class="hits">113</span>
           
-          <code class="ruby">    win_index_1 = combination[0]    # grab each index from the win_combination that composes a win. [left]</code>
+          <code class="ruby">    win_index_1 = winning_combo[0]    # grab each index from the win_combination that composes a win. [left]</code>
         </li>
       
         <li class="covered" data-hits="113" data-linenumber="76">
           <span class="hits">113</span>
           
-          <code class="ruby">    win_index_2 = combination[1]    # grab each index from the win_combination that composes a win. [middle]</code>
+          <code class="ruby">    win_index_2 = winning_combo[1]    # grab each index from the win_combination that composes a win. [middle]</code>
         </li>
       
         <li class="covered" data-hits="113" data-linenumber="77">
           <span class="hits">113</span>
           
-          <code class="ruby">    win_index_3 = combination[2]    # grab each index from the win_combination that composes a win. [right]</code>
+          <code class="ruby">    win_index_3 = winning_combo[2]    # grab each index from the win_combination that composes a win. [right]</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="78">
@@ -591,7 +591,7 @@
         <li class="covered" data-hits="8" data-linenumber="84">
           <span class="hits">8</span>
           
-          <code class="ruby">        return combination # return the win_combination indexes that won</code>
+          <code class="ruby">        return winning_combo # return the win_combination indexes that won</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="85">
