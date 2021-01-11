@@ -34,7 +34,18 @@ def position_taken?(board, index)
   board[index] != " "
 end
 
-# true if move is valid: 1. input between 1-9 2. space is not taken (is free)
+# true if move is valid: 1. input index between 0-8 2. space is not taken (is free)
 def valid_move?(board, index)
   index.between?(0,8) && !position_taken?(board, index)
+end
+
+# retuns # of turns that have been played
+def turn_count (board)
+  turns = 0
+  board.each do |index|
+    if index == "X" || index == "O"
+      turns += 1
+    end
+  end
+  turns
 end
