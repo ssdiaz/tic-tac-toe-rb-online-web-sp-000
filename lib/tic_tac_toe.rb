@@ -8,7 +8,7 @@ WIN_COMBINATIONS = [
   [2,5,8], # Column Right vertical
   [0,4,8], # Right to Left diagonal
   [2,4,6]  # Left to Right diagonal
-   ]
+]
 
 # prints current board representation
 def display_board(board)
