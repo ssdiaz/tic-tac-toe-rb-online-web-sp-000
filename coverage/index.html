@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2021-01-11T03:00:25+00:00">2021-01-11T03:00:25+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2021-01-11T03:02:50+00:00">2021-01-11T03:02:50+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         18.6
+         14.6
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>1</b> files in total.
-    <b>49</b> relevant lines. 
-    <span class="green"><b>49</b> lines covered</span> and
+    <b>47</b> relevant lines. 
+    <span class="green"><b>47</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -53,11 +53,11 @@
       <tr>
         <td class="strong"><a href="#e4f9c9c4a286911b036da0f3bb480f3ba466f9dc" class="src_link" title="lib/tic_tac_toe.rb">lib/tic_tac_toe.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>105</td>
-        <td>49</td>
-        <td>49</td>
+        <td>101</td>
+        <td>47</td>
+        <td>47</td>
         <td>0</td>
-        <td>18.6</td>
+        <td>14.6</td>
       </tr>
       
     </tbody>
@@ -81,8 +81,8 @@
     <h3>lib/tic_tac_toe.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>49</b> relevant lines. 
-      <span class="green"><b>49</b> lines covered</span> and
+      <b>47</b> relevant lines. 
+      <span class="green"><b>47</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -534,22 +534,22 @@
           <code class="ruby">    # win_combination is a 3 element array of indexes that compose a win, [0,1,2]</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="75">
+        <li class="covered" data-hits="113" data-linenumber="75">
+          <span class="hits">113</span>
           
-          
-          <code class="ruby">    #win_index_1 = winning_combo[0]    # grab each index from the win_combination that composes a win. [left]</code>
+          <code class="ruby">    index_1 = board[winning_combo[0]] # load the value of the board at winning_combo&#39;s index</code>
         </li>
       
         <li class="covered" data-hits="113" data-linenumber="76">
           <span class="hits">113</span>
           
-          <code class="ruby">    win_index_2 = winning_combo[1]    # grab each index from the win_combination that composes a win. [middle]</code>
+          <code class="ruby">    index_2 = board[winning_combo[1]] # load the value of the board at win_index_2</code>
         </li>
       
         <li class="covered" data-hits="113" data-linenumber="77">
           <span class="hits">113</span>
           
-          <code class="ruby">    win_index_3 = winning_combo[2]    # grab each index from the win_combination that composes a win. [right]</code>
+          <code class="ruby">    index_3 = board[winning_combo[2]] # load the value of the board at win_index_3</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="78">
@@ -561,49 +561,49 @@
         <li class="covered" data-hits="113" data-linenumber="79">
           <span class="hits">113</span>
           
-          <code class="ruby">    position_1 = board[winning_combo[0]] # load the value of the board at win_index_1</code>
+          <code class="ruby">    if (index_1 == &quot;X&quot; &amp;&amp; index_2 == &quot;X&quot; &amp;&amp; index_3 == &quot;X&quot;) || (index_1 == &quot;O&quot; &amp;&amp; index_2 == &quot;O&quot; &amp;&amp; index_3 == &quot;O&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="113" data-linenumber="80">
-          <span class="hits">113</span>
-          
-          <code class="ruby">    position_2 = board[win_index_2] # load the value of the board at win_index_2</code>
-        </li>
-      
-        <li class="covered" data-hits="113" data-linenumber="81">
-          <span class="hits">113</span>
-          
-          <code class="ruby">    position_3 = board[win_index_3] # load the value of the board at win_index_3</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="82">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="113" data-linenumber="83">
-          <span class="hits">113</span>
-          
-          <code class="ruby">    if (position_1 == &quot;X&quot; &amp;&amp; position_2 == &quot;X&quot; &amp;&amp; position_3 == &quot;X&quot;) || (position_1 == &quot;O&quot; &amp;&amp; position_2 == &quot;O&quot; &amp;&amp; position_3 == &quot;O&quot;)</code>
-        </li>
-      
-        <li class="covered" data-hits="8" data-linenumber="84">
+        <li class="covered" data-hits="8" data-linenumber="80">
           <span class="hits">8</span>
           
           <code class="ruby">        return winning_combo # return the win_combination indexes that won</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="85">
+        <li class="never" data-hits="" data-linenumber="81">
           
           
           <code class="ruby">      end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="86">
+        <li class="never" data-hits="" data-linenumber="82">
           
           
           <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="83">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="84">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="85">
+          <span class="hits">1</span>
+          
+          <code class="ruby">def full?(board) # accept a board and return true if every element in the board contains either x or o</code>
+        </li>
+      
+        <li class="covered" data-hits="49" data-linenumber="86">
+          <span class="hits">49</span>
+          
+          <code class="ruby">  board.all? {|index| index == &quot;X&quot; || index == &quot;O&quot;}</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="87">
@@ -621,19 +621,19 @@
         <li class="covered" data-hits="1" data-linenumber="89">
           <span class="hits">1</span>
           
-          <code class="ruby">def full?(board) # accept a board and return true if every element in the board contains either x or o</code>
+          <code class="ruby">def draw?(board)   # returns true if board not won but full</code>
         </li>
       
-        <li class="covered" data-hits="49" data-linenumber="90">
-          <span class="hits">49</span>
+        <li class="covered" data-hits="7" data-linenumber="90">
+          <span class="hits">7</span>
           
-          <code class="ruby">  board.all? {|index| index == &quot;X&quot; || index == &quot;O&quot;}</code>
+          <code class="ruby">  !won?(board) &amp;&amp; full?(board)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="91">
           
           
-          <code class="ruby">end</code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="92">
@@ -645,19 +645,19 @@
         <li class="covered" data-hits="1" data-linenumber="93">
           <span class="hits">1</span>
           
-          <code class="ruby">def draw?(board)   # returns true if board not won but full</code>
+          <code class="ruby">def over?(board) # true if won, draw, or full</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="94">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="3" data-linenumber="94">
+          <span class="hits">3</span>
           
-          <code class="ruby">  !won?(board) &amp;&amp; full?(board)</code>
+          <code class="ruby">  won?(board) || draw?(board) || full?(board)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="95">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="96">
@@ -669,52 +669,28 @@
         <li class="covered" data-hits="1" data-linenumber="97">
           <span class="hits">1</span>
           
-          <code class="ruby">def over?(board) # true if won, draw, or full</code>
+          <code class="ruby">def winner(board) # returns the token that won</code>
         </li>
       
         <li class="covered" data-hits="3" data-linenumber="98">
           <span class="hits">3</span>
           
-          <code class="ruby">  won?(board) || draw?(board) || full?(board)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="99">
-          
-          
-          <code class="ruby">end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="100">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="101">
-          <span class="hits">1</span>
-          
-          <code class="ruby">def winner(board) # returns the token that won</code>
-        </li>
-      
-        <li class="covered" data-hits="3" data-linenumber="102">
-          <span class="hits">3</span>
-          
           <code class="ruby">  if won?(board)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="103">
+        <li class="covered" data-hits="2" data-linenumber="99">
           <span class="hits">2</span>
           
           <code class="ruby">   board[won?(board)[0]] # find first index of winning board and display it from board</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="104">
+        <li class="never" data-hits="" data-linenumber="100">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="105">
+        <li class="never" data-hits="" data-linenumber="101">
           
           
           <code class="ruby">end</code>
