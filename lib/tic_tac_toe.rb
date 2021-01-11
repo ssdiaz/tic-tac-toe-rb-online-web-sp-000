@@ -82,21 +82,20 @@ def over?(board) # true if won, draw, or full for game to be over (don't need fu
   won?(board) || draw?(board) # || full?(board)
 end
 
-def winner(board) # returns the token that won
+def winner(board) # returns the player token that won
   if won?(board)
-   board[won?(board)[0]] # find first index of winning board and display it from board
+   board[won?(board)[0]] # use first index of winning board and display it from board
   end
 end
 
-# play method, responsi for game loop,
-def play(board)
-  until over?(board)#  until the game is over
-    turn(board) #take turns
+def play(board) # play method, loops the game until over and gives outcome
+  until over?(board)
+    turn(board)
   end
-#
-    if won?(board)#  if the game was won
-     puts "Congratulations #{winner(board)}!" # congratulate the winner
-   elsif draw?(board)       #  else if the game was a draw
-     puts "Cat's Game!"     #    tell the players it has been a draw
+
+    if won?(board)
+     puts "Congratulations #{winner(board)}!"
+   elsif draw?(board)
+     puts "Cat's Game!"
    end
 end
