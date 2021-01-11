@@ -76,7 +76,7 @@ def turn(board)
   user_input = gets.strip                     # get input
   index = input_to_index(user_input)          # convert input to index
   if valid_move?(board, index)           # if index is valid
-      move(board, index)                   # make the move for input
+      move(board, index, player)                   # make the move for input
       puts display_board(board)            # display board after move
   else                                   #else
     turn(board)                            #  ask for input again until given valid input (loop back to top)
