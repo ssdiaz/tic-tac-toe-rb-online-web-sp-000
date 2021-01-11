@@ -99,13 +99,12 @@ end
 
 # play method, responsi for game loop,
 def play(board)
-#  until the game is over
+  until won?(board) || draw?(board)#  until the game is over
     turn(board) #take turns
-#  end
+  end
 #
-#  if the game was won
-#    congratulate the winner
-#  else if the game was a draw
-#    tell the players it has been a draw
-#  end
+    if won?(board)#  if the game was won
+     puts "Congrats! #{winner(board)} won!" # congratulate the winner
+   elsif draw?(board)       #  else if the game was a draw
+     "DRAW. You both lost, losers!"   #    tell the players it has been a draw
 end
