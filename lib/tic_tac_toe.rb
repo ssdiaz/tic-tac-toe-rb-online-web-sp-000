@@ -112,3 +112,8 @@ end
 def draw?(board)   # returns true if board not won but full
   !won?(board) && full?(board)
   end
+
+# Game over (returns true) if board is won or drawn (or full, tho not needed as it's catured in #draw?)
+def over?(board) # true if won, draw, or full
+  won?(board) || draw?(board) #|| full?(board)
+end
