@@ -70,13 +70,13 @@ end
 
 
 def won?(board) # return winning combo index, or false if no win combo
- WIN_COMBINATIONS.find do |winning_combo| # find first  winning_combo in WIN_COMBINATIONS
+ WIN_COMBINATIONS.find do |position_taken?(board, index)| # find first  winning_combo in WIN_COMBINATIONS
     # win_combination is a 3 element array of indexes that compose a win, [0,1,2]
     #if (board[winning_combo[0]] == "X" && board[winning_combo[1]] == "X" && board[winning_combo[2]]  == "X") || (board[winning_combo[0]] == "O" && board[winning_combo[1]] == "O" && board[winning_combo[2]]  == "O")
-    if board[winning_combo[0]] == board[winning_combo[1]] == board[winning_combo[2]]  &&
-      #  board[winning_combo[0]] == board[winning_combo[2]] &&
-        #  board[winning_combo[1]] == board[winning_combo[2]] &&
-            board[winning_combo[0]] != " "
+    if board[winning_combo[0]] == board[winning_combo[1]] &&
+        board[winning_combo[0]] == board[winning_combo[2]] &&
+          board[winning_combo[1]] == board[winning_combo[2]] &&
+            position_taken?(board, winning_combo[0])
         return winning_combo # return the win_combination indexes that won
       end
   end
