@@ -33,3 +33,8 @@ end
 def position_taken?(board, index)
   board[index] != " "
 end
+
+# true if move is valid: 1. input between 1-9 2. space is not taken (is free)
+def valid_move?(board, index)
+  index.between?(0,8) && !position_taken?(board, index)
+end
