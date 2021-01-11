@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2021-01-11T03:11:08+00:00">2021-01-11T03:11:08+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2021-01-11T03:12:29+00:00">2021-01-11T03:12:29+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -525,7 +525,7 @@
         <li class="never" data-hits="" data-linenumber="73">
           
           
-          <code class="ruby"> WIN_COMBINATIONS.find do |winning_combo| # find first  winning_combo in WIN_COMBINATIONS</code>
+          <code class="ruby"> WIN_COMBINATIONS.find do |position_taken?(board, index)| # find first  winning_combo in WIN_COMBINATIONS</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="74">
@@ -543,25 +543,25 @@
         <li class="never" data-hits="" data-linenumber="76">
           
           
-          <code class="ruby">    if board[winning_combo[0]] == board[winning_combo[1]] == board[winning_combo[2]]  &amp;&amp;</code>
+          <code class="ruby">    if board[winning_combo[0]] == board[winning_combo[1]] &amp;&amp;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="77">
           
           
-          <code class="ruby">      #  board[winning_combo[0]] == board[winning_combo[2]] &amp;&amp;</code>
+          <code class="ruby">        board[winning_combo[0]] == board[winning_combo[2]] &amp;&amp;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="78">
           
           
-          <code class="ruby">        #  board[winning_combo[1]] == board[winning_combo[2]] &amp;&amp;</code>
+          <code class="ruby">          board[winning_combo[1]] == board[winning_combo[2]] &amp;&amp;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="79">
           
           
-          <code class="ruby">            board[winning_combo[0]] != &quot; &quot;</code>
+          <code class="ruby">            position_taken?(board, winning_combo[0])</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="80">
