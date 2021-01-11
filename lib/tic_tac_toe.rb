@@ -30,7 +30,7 @@ def input_to_index(user_input)
 end
 
 # determines player's move
-def move (board, index, player)
+def move(board, index, player)
   board[index] = player
 end
 
