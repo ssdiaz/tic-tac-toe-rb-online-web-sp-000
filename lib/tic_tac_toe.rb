@@ -12,9 +12,7 @@ WIN_COMBINATIONS = [
   [2,4,6]  # Left to Right diagonal
    ]
 
-# empty board
-#board_empty = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
-# board = [" ", "X", " ", " ", " ", " ", " ", " ", " "]
+# board1 = [" ", "X", " ", " ", " ", " ", " ", " ", " "]
 
 # prints current board played
 def display_board (board)
@@ -31,27 +29,23 @@ def input_to_index(user_input)
 end
 
 # determines player's move
-def move(board, index, player)
-  board[index] = player
+def move(board, index, current_player)
+  board[index] = current_player
 end
 
 # evaluates if position selcted by user is not taken.
 # If position free, returns false. If position taken, return true
 def position_taken? (board, index)
-  if board[index] == " " || board[index] ==  "" || board[index] == nil
-    board[index] = false
-  else
-    board[index] = true
-  end
+   board[index] != " " || board[index] !=  "" || board[index] != nil
 end
 
 # Returns true if move is valid, and false if move is nil or invalid.
 # A valid position is: 1. present on the board, 2. not aleady taken
 def valid_move?(board, index)
-  if !position_taken?(board,index) && index.between?(0,8)
-    true
-  else
-    false
+  if index.between?(0,8)
+    if !position_taken?(board, index)
+      true
+    end
   end
 end
 
