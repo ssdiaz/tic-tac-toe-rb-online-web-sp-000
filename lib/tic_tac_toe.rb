@@ -14,6 +14,7 @@ WIN_COMBINATIONS = [
 
 # empty board
 #board_empty = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+# board = [" ", "X", " ", " ", " ", " ", " ", " ", " "]
 
 # prints current board played
 def display_board (board)
