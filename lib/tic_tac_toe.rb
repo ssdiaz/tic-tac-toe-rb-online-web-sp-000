@@ -26,7 +26,7 @@ end
 
 # sets index to current player's token
 def move(board, index, token)
-  board[index] = player
+  board[index] = token
 end
 
 # check if position is free; returns true if position is taken, & false if position is free
