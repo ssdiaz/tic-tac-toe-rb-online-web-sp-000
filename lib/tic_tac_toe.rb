@@ -99,7 +99,7 @@ end
 
 # play method, responsi for game loop,
 def play(board)
-  until won?(board) || draw?(board)#  until the game is over
+  until over?(board)#  until the game is over
     turn(board) #take turns
   end
 #
