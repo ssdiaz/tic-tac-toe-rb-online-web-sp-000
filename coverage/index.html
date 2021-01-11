@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2021-01-11T02:59:19+00:00">2021-01-11T02:59:19+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2021-01-11T03:00:25+00:00">2021-01-11T03:00:25+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         20.5
+         18.6
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>1</b> files in total.
-    <b>50</b> relevant lines. 
-    <span class="green"><b>50</b> lines covered</span> and
+    <b>49</b> relevant lines. 
+    <span class="green"><b>49</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -54,10 +54,10 @@
         <td class="strong"><a href="#e4f9c9c4a286911b036da0f3bb480f3ba466f9dc" class="src_link" title="lib/tic_tac_toe.rb">lib/tic_tac_toe.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>105</td>
-        <td>50</td>
-        <td>50</td>
+        <td>49</td>
+        <td>49</td>
         <td>0</td>
-        <td>20.5</td>
+        <td>18.6</td>
       </tr>
       
     </tbody>
@@ -81,8 +81,8 @@
     <h3>lib/tic_tac_toe.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>50</b> relevant lines. 
-      <span class="green"><b>50</b> lines covered</span> and
+      <b>49</b> relevant lines. 
+      <span class="green"><b>49</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -525,7 +525,7 @@
         <li class="covered" data-hits="16" data-linenumber="73">
           <span class="hits">16</span>
           
-          <code class="ruby"> WIN_COMBINATIONS.find do |winning_combo| # find first winning_combo combination in WIN_COMBINATIONS</code>
+          <code class="ruby"> WIN_COMBINATIONS.find do |winning_combo| # find first  winning_combo in WIN_COMBINATIONS</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="74">
@@ -534,10 +534,10 @@
           <code class="ruby">    # win_combination is a 3 element array of indexes that compose a win, [0,1,2]</code>
         </li>
       
-        <li class="covered" data-hits="113" data-linenumber="75">
-          <span class="hits">113</span>
+        <li class="never" data-hits="" data-linenumber="75">
           
-          <code class="ruby">    win_index_1 = winning_combo[0]    # grab each index from the win_combination that composes a win. [left]</code>
+          
+          <code class="ruby">    #win_index_1 = winning_combo[0]    # grab each index from the win_combination that composes a win. [left]</code>
         </li>
       
         <li class="covered" data-hits="113" data-linenumber="76">
@@ -561,7 +561,7 @@
         <li class="covered" data-hits="113" data-linenumber="79">
           <span class="hits">113</span>
           
-          <code class="ruby">    position_1 = board[win_index_1] # load the value of the board at win_index_1</code>
+          <code class="ruby">    position_1 = board[winning_combo[0]] # load the value of the board at win_index_1</code>
         </li>
       
         <li class="covered" data-hits="113" data-linenumber="80">
