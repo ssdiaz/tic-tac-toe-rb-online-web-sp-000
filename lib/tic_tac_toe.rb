@@ -106,5 +106,5 @@ def play(board)
     if won?(board)#  if the game was won
      puts "Congrats! #{winner(board)} won!" # congratulate the winner
    elsif draw?(board)       #  else if the game was a draw
-     "DRAW. You both lost, losers!"   #    tell the players it has been a draw
+     puts "DRAW. You both lost, losers!"   #    tell the players it has been a draw
 end
