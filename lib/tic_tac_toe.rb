@@ -30,8 +30,8 @@ def input_to_index (user_input)
 end
 
 # determines player's move
-def move (board, index, player_token)
-  board[index] = player_token
+def move (board, index, player)
+  board[index] = player
 end
 
 # evaluates if position selcted by user is not taken.
@@ -116,4 +116,11 @@ def draw?(board)   # returns true if board not won but full
 # Game over (returns true) if board is won or drawn (or full, tho not needed as it's catured in #draw?)
 def over?(board) # true if won, draw, or full
   won?(board) || draw?(board) #|| full?(board)
+end
+
+# returns the player_token of winning player
+def winner(board) # returns the token that won
+  if won?(board)
+   board[won?(board)[0]] # find first index of winning board and display it from board
+  end
 end
