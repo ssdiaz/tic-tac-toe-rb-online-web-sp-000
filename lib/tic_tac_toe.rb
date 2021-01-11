@@ -49,3 +49,8 @@ def turn_count (board)
   end
   turns
 end
+
+# determines if X turn (evens) or O turn (odd)
+def current_player (board)
+  turn_count(board).even? ? "X" : "O"
+end
