@@ -24,11 +24,6 @@ def input_to_index(user_input)
   user_input.to_i - 1
 end
 
-# sets index to current player's token
-def move(board, index, current_player)
-  board[index] = current_player
-end
-
 # check if position is free; returns true if position is taken, & false if position is free
 def position_taken?(board, index)
   board[index] != " "
@@ -55,6 +50,11 @@ def current_player (board)
   turn_count(board).even? ? "X" : "O"
 end
 
+# sets index to current player's token
+def move(board, index, current_player)
+  board[index] = current_player
+end
+
 # represents a single turn move
 def turn(board)
   puts 'Please enter 1-9:'
@@ -65,5 +65,43 @@ def turn(board)
     display_board(board)
   else
     turn(board)
+  end
+end
+
+# return winning combo index, or false if no win combo
+def won?(board)
+ WIN_COMBINATIONS.find do |win_combination| #  for each win_combination in WIN_COMBINATIONS
+    # win_combination is a 3 element array of indexes that compose a win, [0,1,2]
+    win_index_1 = win_combination[0]    # grab each index from the win_combination that composes a win. [left]
+    win_index_2 = win_combination[1]    # grab each index from the win_combination that composes a win. [middle]
+    win_index_3 = win_combination[2]    # grab each index from the win_combination that composes a win. [right]
+
+    position_1 = board[win_index_1] # load the value of the board at win_index_1
+    position_2 = board[win_index_2] # load the value of the board at win_index_2
+    position_3 = board[win_index_3] # load the value of the board at win_index_3
+
+    if (position_1 == "X" && position_2 == "X" && position_3 == "X") || (position_1 == "O" && position_2 == "O" && position_3 == "O")
+        return win_combination # return the win_combination indexes that won
+    #  else
+      #  false
+      end
+  end
+end
+
+def full?(board) # accept a board and return true if every element in the board contains either x or o
+  board.all? {|index| index == "X" || index == "O"}
+end
+
+def draw?(board)   # returns true if board not won but full
+  !won?(board) && full?(board)
+  end
+
+def over?(board) # true if won, draw, or full
+  won?(board) || draw?(board) || full?(board)
+end
+
+def winner(board) # returns the token that won
+  if won?(board)
+   board[won?(board)[0]] # find first index of winning board and display it from board
   end
 end
