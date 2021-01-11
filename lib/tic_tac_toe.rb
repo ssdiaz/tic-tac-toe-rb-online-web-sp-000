@@ -102,3 +102,13 @@ def won?(board)
       end
   end
 end
+
+# returns true if all elements on board are full
+def full?(board) # accept a board and return true if every element in the board contains either x or o
+  board.all? {|index| index == "X" || index == "O"}
+end
+
+# returns true for a draw if board is full and no WIN_COMBINATIONS present
+def draw?(board)   # returns true if board not won but full
+  !won?(board) && full?(board)
+  end
