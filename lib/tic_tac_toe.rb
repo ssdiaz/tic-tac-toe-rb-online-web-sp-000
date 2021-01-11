@@ -43,3 +43,13 @@ def position_taken? (board, index)
     board[index] = true
   end
 end
+
+# Returns true if move is valid, and false if move is nil or invalid.
+# A valid position is: 1. present on the board, 2. not aleady taken
+def valid_move?(board, index)
+  if !position_taken?(board,index) && index.between?(0,8)
+    true
+  else
+    false
+  end
+end
