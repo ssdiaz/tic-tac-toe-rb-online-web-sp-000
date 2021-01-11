@@ -34,7 +34,7 @@ def move (board, index, player_token)
   board[index] = player_token
 end
 
-# evaluates if position selcted by user is not taken. 
+# evaluates if position selcted by user is not taken.
 # If position free, returns false. If position taken, return true
 def position_taken? (board, index)
 
