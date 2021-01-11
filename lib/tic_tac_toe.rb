@@ -24,7 +24,10 @@ def input_to_index(user_input)
   user_input.to_i - 1
 end
 
-
+# sets index to current player's token
+def move(board, index token)
+  board[index] = token
+end
 
 # check if position is free; returns true if position is taken, & false if position is free
 def position_taken?(board, index)
@@ -67,9 +70,4 @@ def turn(board)
   else
     turn(board)
   end
-end
-
-# sets index to current player's token
-def move(board, index, token)
-  board[index] = token
 end
