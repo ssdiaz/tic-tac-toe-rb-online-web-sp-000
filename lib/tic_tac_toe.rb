@@ -37,11 +37,9 @@ end
 # evaluates if position selcted by user is not taken.
 # If position free, returns false. If position taken, return true
 def position_taken? (board, index)
-
   if board[index] == " " || board[index] ==  "" || board[index] == nil
     board[index] = false
   else
     board[index] = true
   end
-
 end
